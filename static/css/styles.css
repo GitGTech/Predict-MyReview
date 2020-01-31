@@ -36,7 +36,7 @@ html{ min-height: 100%;
 }
  
 .navbar-collapse{
-    background-color:blue;
+    background-color: #1E8783;
     width: 100%;
     min-height:100px;
     text-align: justify;
@@ -136,28 +136,51 @@ html{ min-height: 100%;
     text-decoration-color:black;
 }
 
-
-
-
-.footer{
-    display: block;
-    border-top-color: darkturquoise;
-    background-color: dimgray;
-    height: 30px;
-    
-}
-.text-muted{
-    font-size: 14px;
-    /* margin-top: 10px; */
+footer a {
+    color: white;
+  }
   
-    color:white;
+  footer a:hover {
+    color: #FFD87D;
+  }
+       
+   /* .footer {
+    clear: both;
+    text-align: center;
+    margin: 0px 30px 50px 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color:#1E8783;
+    font-family: 'Chivo';
+    color: #CCC;
+    }   */
 
-}
-.two-toned-footer-color{
+
+  .footer{
+    display: block;
+    height: 80px;
+    /* border-top-color: darkturquoise; */
+     background-color: #1E8783;
+     padding-top: 5px;
+    margin: 50px 0px 0px 0px;
+    font-family: 'Chivo';
+    color: #CCC;
+}        
+
+
+
+
+ .text-muted{
+    font-size: 14px;
+     margin-top: 10px; 
+  
+     color:white; 
+
+ } 
+ .two-toned-footer-color{
     height: 9px;
     background-color: darkturquoise;
-}
-
+}  
 
 .data-content{
     display: block;

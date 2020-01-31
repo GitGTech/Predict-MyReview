@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Sentiment Analysis Visualization Dashboard</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/yelpstyle.css') }}">
 </head>
 <body>
@@ -35,6 +35,25 @@
 	{% endif %}
 
 	</div>
+	<!-- footer begins -->
+	<footer class="footer navbar-fixed-bottom">
+			<!-- <div class="two-toned-footer-color"></div> -->
+			<p class="text-center" style="font-size:20px"><a href="https://www.linkedin.com/in/georgeoddoye/" target="_blank">George Oddoye</a>, 
+			  <a href="https://www.linkedin.com/in/minukhosla/" target="_blank">Minu Khosla</a>,
+			  <a href="https://www.linkedin.com/in/vidhyaj1974/" target="_blank">Vidhyanandhi Jegannathan</a>
+			</p>
+			<p class="text-center" style="font-size:24px">George Institute of Technology  Data Analytics : Sentiment Analysis Team</p>
+		  </footer>
+		  <!-- End of footer -->
+	  
+		  <!-- jQuery CDN -->
+		  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	  
+		  <!-- Bootstrap JS CDN -->
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 	{% endblock %}
+
+
 </body>
 </html>
