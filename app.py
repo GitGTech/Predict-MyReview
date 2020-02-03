@@ -66,7 +66,7 @@ def predict():
 
 @app.route("/data")
 def datatabicon():
-     return render_template("databutton.html")
+     return render_template("data_table.html")
 
 
 

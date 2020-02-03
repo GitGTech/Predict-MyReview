@@ -4,7 +4,7 @@
 
 console.log("READING CSV FILE")
 // csv file 
-csv_file = 'amazon_data_small_clean.csv'
+csv_file = 'data/amazon_data_small_clean.csv'
   
 // Grab the data with d3
 d3.csv(csv_file).then(data => 

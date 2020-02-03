@@ -10,6 +10,11 @@ body {
 html {
   height: 100%;
 } */
+.container {
+  margin: 0 auto;
+  max-width: calc(100% - 5em);
+  width: 60em;
+}
 
 #map {  
   height: 700px;
