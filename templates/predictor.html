@@ -84,9 +84,13 @@
                     
                   </form>
 
+                  <!-- {{prediction}} -->
 
-
-               
+                  {% if prediction == 'This review is POSITIVE'%}
+                  <h2 style="color:green;">This review is POSITIVE </h2>
+                  {% elif prediction == 'This review is NEGATIVE'%}
+                  <h2 style="color: red;">This review is NEGATIVE </h2>
+                  {% endif %}
                
               </article>
             </div>
