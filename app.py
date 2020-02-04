@@ -62,7 +62,7 @@ def predict():
 
 	
 	
-     return render_template('predictor.html',prediction = prediction)
+     return render_template('predictor.html',prediction = prediction, message= message)
 
 
 # @app.route('/predict',methods=['POST'])

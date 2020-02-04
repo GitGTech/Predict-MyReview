@@ -25,26 +25,27 @@
       {% block content %}
       <div class="container">
         <section class="row">
-          <div class="col-md-12">
-            <h1 class="description-header" style="font-size:38px">Gun Violence from Jan 2014 to Dec 2017 Yearly Reports </h1>
-            <hr class="description-hr"/>
-          </div>
+ 
       </div>
     
       
-        <div id="barchart"></div> 
-      
-        <script src="https://d3js.org/d3.v5.min.js"></script>
-        
-        <script src="../static/js/line.js"></script>
+     
         <div class="container" >
           <section class="row">
-            <div class="col-md-10">
+            <div class="col-md-12">
+              <img src="/static/images/model.jpg" class="center"/>
               <article class="description-content">
+                
                 <br>
-                <h1 class="description-header">Bar Chart: Gun Violence (2014-2017)</h1>
+                <h1>Data</h1>
                 <hr class="description-hr"/>
-                <img src="../static/assets/images/gun_bar.jpg" alt="" id="description-image"/>
+                <p>The purpose of this project was to create a model, using NLP and machine learning, which could predict if any given review is positive or negative. The model was trained and tested using data found on <a href="https://www.kaggle.com/datafiniti/consumer-reviews-of-amazon-products" target="_blank">Kaggle</a>. The dataset contained a list of over 34,000 reviews of Amazon products like the Kindle, Fire TV, ect. It had 21 columns ranging from product asin to the date the review was added. The columns we were concerned about, in regards to the model, were "reviews.text" and "reviews.rating". However before we could select the relevant columns the data needed to be downloaded and read. 
+                </p>
+                <img src="/static/images/data.jpg" class="center"/>
+
+                 <p>This was achieved using pandas which is a software library written for the Python programming language for data manipulation and analysis. Pandas, which is derived from "panel data", is capable of accomplishing several task but in regards to extraction it's ability for reading/importing and writing/exporting data between in-memory data structures and different file formats such as csv, excel, json, ect was utilized. A pd.read_csv() function was called on the file path created above and the information was stored into a dataframe named df.</p>
+                 <img src="/static/images/pdread.jpg" class="center"/>
+                
                 <p>This bar chart displays the number of gun violence incidents which resulted in either death or injuries during the years of 2014 through 2017 across the United States of America.</p>
                 <p>During those four years of time each succesive year resulted in more incidents of gun violene (resulting in death/injuries) than the previous year. However there was an intresting trend in the data.</p>
                 <table style="width:100%" border="2">
