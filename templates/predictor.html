@@ -47,23 +47,21 @@
                 <hr class="description-hr"/>
 
                 <div class="dropdown">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> 
-                     Review Choices <div class="caret"> </div> 
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li> <a href="https://www.amazon.com/product-reviews/B07P6Y8L3F/ref=acr_dp_hist_5?ie=UTF8&filterByStar=five_star&reviewerType=all_reviews#reviews-filter-bar/" target="_blank">Amazon</a></li>
-                    <li> <a href="https://www.angieslist.com/companylist/us/ny/albany/long-energy-reviews-297292.htm/" target="_blank">Angie's List</a></li>
-                    <li> <a href="https://www.glassdoor.com/Reviews/index.htm/" target="_blank">Glassdoor </a></li>
-                    <li> <a href="https://www.studentsreview.com/GA/Georgia_Institute_of_Technology.html/" target="_blank">Georgia Tech Reviews</a></li>
-                    <li> <a href="https://www.tripadvisor.com/?fid=406251b9-380b-4dd6-8cc6-0f9a5e29a42a/" target="_blank">TripAdvisor </a></li>
-                    <li> <a href="https://www.yelp.com/" target="_blank">Yelp</a> </li>
-                    
-                    
-                    
-                    
-                  </ul>
-
-                </div>
+                    <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" > 
+                       Review Choices <div class="caret"> </div> 
+                    </button>
+  
+                                <ul class="dropdown-menu">
+                                  <li><button class="btn btn primary"></i><a href="https://www.amazon.com/product-reviews/B07P6Y8L3F/ref=acr_dp_hist_5?ie=UTF8&filterByStar=five_star&reviewerType=all_reviews#reviews-filter-bar/" target="_blank">Amazon</a><i class="fa fa-amazon"> </i></button> </li>
+                                  <li> <a href="https://www.angieslist.com/companylist/us/ny/albany/long-energy-reviews-297292.htm/" target="_blank">Angie's List</a></i></li>
+                                  <li> <a href="https://www.glassdoor.com/Reviews/index.htm/" target="_blank">Glassdoor </a></li>
+                                  <li> <a href="https://www.studentsreview.com/GA/Georgia_Institute_of_Technology.html/" target="_blank">Georgia Tech Reviews</a></li>
+                                  <li> <button class="btn btn primary"><a href="https://www.tripadvisor.com/?fid=406251b9-380b-4dd6-8cc6-0f9a5e29a42a/" target="_blank">TripAdvisor </a><i class="fa fa-tripadvisor" aria-hidden="true"></i></button></li>
+                                  <li> <button class="btn btn primary"><a href="https://www.yelp.com/" target="_blank">Yelp</a><i class="fa fa-yelp" aria-hidden="true"></i></button></li>
+                                    
+                                </ul>
+                        
+                  </div>
 
                 <br>
                 <br>
@@ -72,29 +70,31 @@
 
                 <br>
                 <br>
-
+                <div class=" row">
+                    <div class="col-md-6">
               
-                <form action="{{ url_for('predict')}}" method="POST">
-                    <p>Enter Your Message Here</p>
-                    <!-- <input type="text" name="comment"/> -->
-                    <textarea name="message" rows="4" cols="50"></textarea>
-                    <br/>
-                
-                    <input type="submit" class="btn-info" value="predict">
-                    
-                  </form>
-
-                  <!-- {{prediction}}  -->
-
-                  <br><br>
-                  {{message}}
-                  <br>
-                  {% if prediction == 'This review is POSITIVE'%}
-                  <h2 style="color:green;">This review is POSITIVE </h2>
-                  {% elif prediction == 'This review is NEGATIVE'%}
-                  <h2 style="color: red;">This review is NEGATIVE </h2>
-                  {% endif %}
-               
+                            <form action="{{ url_for('predict')}}" method="POST">
+                                <p>Enter Your Message Here</p>
+                                <!-- <input type="text" name="comment"/> -->
+                                <textarea name="message" rows="4" cols="50"></textarea>
+                                <br/>
+                            
+                                <input type="submit" class="btn btn-primary btn-lg" value="Predict">
+                                
+                              </form>
+                    </div>
+                    <div class="col-md-6">
+                                 <!-- {{prediction}}  -->
+                                 <h3> The Input Review</h3>
+                                    {{message}}
+                                  <br><br>
+                                  {% if prediction == 'This review is POSITIVE'%}
+                                  <h2 style="color:green;">This review is POSITIVE </h2>
+                                  {% elif prediction == 'This review is NEGATIVE'%}
+                                  <h2 style="color: red;">This review is NEGATIVE </h2>
+                                  {% endif %}                                
+                    </div>
+                </div>         
                   <br><br>
 
                   <img src="static/images/humanerror.jpg" class="col-md-12"/>
