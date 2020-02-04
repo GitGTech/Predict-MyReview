@@ -2,48 +2,21 @@
 /* DATA TABLE */
 //////////////////////////////////////////////
 
+
+
 console.log("READING CSV FILE")
 // csv file 
 csv_file = 'static/data/amazon_data_small_clean.csv'
-  
-// Grab the data with d3
-d3.csv(csv_file).then(data => 
-//d3.json(jsonData).then(data => 
-{
-  //Loop through data
-//   data.forEach( row => {
 
-//     // console.log(row)
-//     var rating_predict = row.review_rating;
-//     var rating_score = row.reviews_rating_score;
-//     var brand = row.brand;
-//     var categories = row.Categories;
-//     var manufacturer = row.manufacturer;
-//     var date = row.reviews_date;
-//     var recommed = row.reviews_doRecommend;
-//     var text = row.reviews_text;
-//     var title = row.reviews_title;
+// Selecting tbody element of html
+var tbody = d3.select("tbody");
 
 
-//     console.log("")
-//     // if (text && rating) 
-//     // {
-//     //   console.log(text)
-//     // }
-//     // console.log(text)
 
-    
-//   })
-  
-    // console.log(data)
+/*******************************************************/
 
-    var tableData = data;
-
-    // Selecting tbody element of html
-    var tbody = d3.select("tbody");
-
-    // Function to add data - to HTML Table
-    function addRow(item){
+// Function to add data - to HTML Table
+function addRow(item){
     // Creating a new row into table element
     var row = tbody.append("tr");
     // Reading value in the object and then inserting that values into table row.
@@ -51,108 +24,110 @@ d3.csv(csv_file).then(data =>
 }
 
 
-// Calling a function 'addRow'for each item of an array 'tableData'
-tableData.forEach(addRow);
-});
+
+/*******************************************************/
 
 
-//// Using the UFO dataset provided in the form of an array of JavaScript objects,
-//// write code that appends a table to your web page and
-//// then adds new rows of data for each UFO sighting.
-
-
-// from data.js
-// var tableData = data;
-
-// // Selecting tbody element of html
-// var tbody = d3.select("tbody");
-
-// // Function to add data - to HTML Table
-// function addRow(item){
-//     // Creating a new row into table element
-//     var row = tbody.append("tr");
-//     // Reading value in the object and then inserting that values into table row.
-//     Object.values(item).forEach(value => row.append("td").text(value))   
-// }
-
-
-// // Calling a function 'addRow'for each item of an array 'tableData'
-// tableData.forEach(addRow);
-
-
-
-
-////////////////////////////////////////////////////
-/* Level 2: Multiple Search Categories (Optional) */
-////////////////////////////////////////////////////
-
-//// Using multiple input tags and/or select dropdowns, 
-//// write JavaScript code so the user can to set multiple filters and 
-//// search for UFO sightings using the following criteria based on the table columns
-
-
-
-function selectedOption(searchOption, inputValue)
+function filter_data(tableData, column ,value)
 {
-  console.log(searchOption, inputValue);
-  // Filter the data
-  var filteredData = tableData.filter(item => item[searchOption] === inputValue)
-  console.log(filteredData);
-  //Clear the table
-  tbody.html("");
-  // Calls addroe function for each item of filteredData
-  filteredData.forEach(addRow);
-  // Id default option is selected, shows all data
-  if (searchOption === 'defaultoption'){
-    tableData.forEach(addRow);
-    // Input box gets clear once default option is selected
-    d3.select("#inputBox").property("value","");
-  }
+// Filtering out the data based on input value
+var filteredData = tableData.filter(item => item[column] === value)
+// var filteredData = tableData.filter(item => console.log(item))
+// console.log(filteredData);
+
+//  Counting filtered records
+var records_count = filteredData.length
+console.log(records_count)
+
+var h5 = d3.select("#record_count");
+h5.text("RECORDS FOUND : " +  records_count)
+
+// Clearing out the tr and td from tbody
+tbody.html("");
+
+// Calling a function for each item of an array 'filteredData'
+filteredData.forEach(addRow);
+
 }
 
 
-function getData(newValue) {
-    // Fetching user input
-    var dataInputField = d3.select("#inputBox");
-    var inputValue = dataInputField.property("value");
-    console.log(inputValue);
+/*******************************************************/
 
-    var searchValue = ""
+function optionChanged(id, value) {
 
-    switch (newValue) {
-        case "date/time":
-            searchValue = "datetime"
-            console.log(searchValue);
-            break;
-        case "city":
-            searchValue = "city"
-            console.log(searchValue);
-            break;
-        case "state":
-            searchValue = "state"
-            console.log(searchValue);
-            break;
-        case "country":
-            searchValue = "country"
-            console.log(searchValue);
-            break;
-        case "shape":
-            searchValue = "shape"
-            console.log(searchValue);
-            break;  
-        case "defaultoption":
-            searchValue = 'defaultoption';
-            inputValue = '';    
-            break;
-        default:
-            //selectedOption(newValue);
-            break;
-            
-    }   
-    console.log(searchValue, inputValue);
-    // Calling function with selected option and user input value
-    selectedOption(searchValue, inputValue);
-  }
+    console.log("Inside Option Function")
+    console.log(id)
+    console.log(value)
+
   
+    // Grab the data with d3
+    d3.csv(csv_file).then(data => 
+        {
+            console.log("Inside csv")
+            var tableData = data;
+
+            if(value === "default")
+            {
+                console.log("INSIDE IF " + id, value)
+                tableData.forEach(addRow);
+                var records_count = tableData.length
+                console.log(records_count)  
+                
+            }
+            else
+            {
+                console.log("INSIDE ELSE " + id, value)
+
+                if (id=="review_score") 
+                {   
+                    column = "reviews_rating_score"
+                    console.log("Inside option - review score - " + id, value)
+                    filter_data(tableData, column, value)            
+                }
+                else if (id=="review_recommend") 
+                {   
+                    column = "reviews_doRecommend"
+                    console.log("Inside option - review recommend - " +id, value)
+                    filter_data(tableData, column, value)            
+                }
+                else if (id=="review_type") 
+                {   
+                    column = "review_rating"
+                    console.log("Inside option - review type - " + id, value)
+                    filter_data(tableData, column, value)            
+                }
+                
+            }  // else ends
+           } 
+    );  // then ends
+}  // function ends
 
 
+
+
+
+/******************************************************************/
+// function to display default contents
+function init() 
+{
+ 
+    // Grab the data with d3
+    d3.csv(csv_file).then(data => 
+    {
+        // d3.select("#cont2").setAttribute("style", "margin-left:80px;");
+        // console.log(data)
+        var tableData = data;
+        // Selecting tbody element of html
+        var tbody = d3.select("tbody");
+        
+        // Calling a function 'addRow'for each item of an array 'tableData'
+        tableData.forEach(addRow);
+        
+        // Displaying total records in console
+        console.log(tableData.length)
+
+    });
+}
+
+// Initialize the dashboard
+init();
