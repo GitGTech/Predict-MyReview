@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" media="screen"> -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" media="screen">  
+     <link rel="stylesheet" href="../static/css/styles.css" media="screen"> 
+
+
+
+
+
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-dark primary-color"></nav>
+            <div class="container-fluid navbar-custom"> 
+                <div class="row">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle Navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    
+                        <div class="col-xs-9 phone-nav">
+                   
+                         <a class="navbar-brand" href="{{ url_for('index') }}" id="logo"><span class="glyphicon glyphicon-fire"></span>   Sentiment Analysis</a> 
+                       
+                        </div>
+                    </div>
+                </div>
+              
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-center navbar-center-custom">
+                    <li class="datatab"><a href="{{ url_for('datatabicon') }}"><span class="glyphicon glyphicon-signal"></span>Data</a></li>
+                    <li class="datatab"><a href="{{ url_for('modelicon') }}"> <span class="glyphicon glyphicon-home"></span> Model</a></li>
+                    <li class="datatab"><a href="{{ url_for('precisionicon') }}"> <span class="glyphicon glyphicon-ok-sign"></span>   Precision</a></li>
+                    <li class="datatab"><a href="{{ url_for('predictoricon') }}"> <span class="glyphicon glyphicon-eye-open"></span> Predictor</a></li>
+                    
+                    
+                  </ul>  
+                    
+                  
+                </div>         <!-- /.navbar-collapse -->
+             
+            </div>            
+        </nav> <!-- End of navbar -->
+          <!-- <div class="container"> -->
+    
+</body>
+</html>

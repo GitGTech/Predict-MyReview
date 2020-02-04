@@ -1,4 +1,8 @@
-body{ background-color: whitesmoke;
+ body{ 
+    background-image: url("../assets/images/background.jpg");
+    height: 100%;
+  padding: 0;
+  margin: 0;
     margin-bottom: 150px;
 
 }
@@ -7,6 +11,19 @@ html{ min-height: 100%;
     position: relative;
 
 }
+
+#images{
+
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    margin-right: 20px;
+
+
+
+}
+
+
 
 #description-image{
     width: 200px;
@@ -29,14 +46,24 @@ html{ min-height: 100%;
 }
 .description-header{
     margin-bottom: 30px;
+    align-content: center;
     font-weight: bold;
     color: darkturquoise;
-    font-size: 32px;
+    font-size: 18px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
  
+.indexpage-image{
+
+   float:center;
+
+
+
+}
+
+
 .navbar-collapse{
-    background-color: #1E8783;
+    background-color: rgb(236, 241, 243);
     width: 100%;
     min-height:100px;
     text-align: justify;
@@ -67,8 +94,9 @@ html{ min-height: 100%;
     float: inherit;
     margin-top: 20px;
     margin-left: 170px;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bolder;
+    align-content: center;
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -129,7 +157,7 @@ html{ min-height: 100%;
     font-size: 20px;
     margin-top: 20px;
     color:black;
-    background-color: orange;
+    background-color: rgb(4, 20, 163);
     mask-border-width: 20px;
     text-align: center;
     /* padding: 40px, 30px ;  */
@@ -157,6 +185,10 @@ footer a {
 
 
   .footer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
     display: block;
     height: 80px;
     /* border-top-color: darkturquoise; */

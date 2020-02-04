@@ -9,55 +9,113 @@
     <title>Sentiment Analysis Visualization Dashboard</title>
 
     <!-- Boostrap Stylesheet -->
-    <link rel="stylesheet" href="../static/css/bootstrap.min.css" media="screen"> 
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" media="screen"> 
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" media="screen"> -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     
     <!-- Our own CSS stylesheet -->
    
-    <link rel="stylesheet" href="../static/css/styles.css" media="screen"> 
-    <link rel="stylesheet" href="../static/css/style.css" media="screen">
+    <!-- <link rel="stylesheet" href="static/css/styles.css" media="screen">  -->
+    <!-- <link rel="stylesheet" href="../static/css/style.css" media="screen"> -->
     <!-- Leaflet CSS & JS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
-  integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
-  crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
-  integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
-  crossorigin=""></script>
+  
   <script src="https://d3js.org/d3.v5.min.js"></script>
    
   <!-- Marker Cluster JS & CSS -->
-  <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
-
+<!--   
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> -->
+  <!-- <link rel="stylesheet" href="static/css/styles.css" media="screen">  -->
   </head>
 
   <body>
 
     {% extends "layout.html" %}
     {% block content %}
-    <!-- <div class="container">
-      <div class="row" > 
-        <img src="static/assets/images/gun2.jpg" height="500px"/>
-      </div>
-    </div> -->
-   <br><br>
+    <div class="wrapper">
+      <div class="container">
+        <section class="row">
+          <div class="col-md-4">
+            <article class="description-content">
+              <h4 class="description-header">WHAT IS SENTIMENT ANALYSIS AND WHY IS IT IMPORTANT</h4> 
+              <hr class="description-hr"/>
+              <!-- <img src="assets/images/Fig1.png" alt="" id="description-image"/> -->
+              <a href="https://goascribe.com/products-services/sentiment-analysis-tools/" target="_blank"><img src="../static/assets/images/smileyfaces.jpeg" alt="Sentiment Analysis - What & Why" id="description-image"></a>
+              <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
+              <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+            </article>
+          </div>
 
-   <div class="container">
-    <section class="row">
-      <div class="col-md-10">
   
-          <h1 class="description-header" style="font-size:45px" align="center">Sentiment Analysis - words that can make you or break you </h1>
-          <hr class="description-hr"/>
-          <img src="static/assets/images/reviews_doughnut.png"height="530px" />
-        <article class="description-content">
+              <div class="col-md-4">
+                <article class="description-content">
+                  <h4 class="description-header">THE POWER OF CUSTOMER REVIEWS</h4> 
+                  <hr class="description-hr"/>
+                  <!-- <img src="assets/images/Fig1.png" alt="" id="description-image"/> -->
+                  <a href="https://goascribe.com/products-services/sentiment-analysis-tools/" target="_blank"><img src="../static/assets/images/wordcloud1.PNG" alt="POWER OF CUSTOMER REVIEWS" id="description-image"></a>
+                  <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
+                  <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+                </article>
+              </div>
 
+              <div class="col-md-4">
+                <article class="description-content">
+                  <h4 class="description-header">PURPOSE OF OUR PROJECT</h4> 
+                  <hr class="description-hr"/>
+                  <!-- <img src="assets/images/Fig1.png" alt="" id="description-image"/> -->
+                  <a href="https://goascribe.com/products-services/sentiment-analysis-tools/" target="_blank"><img src="../static/assets/images/smileyfaces.jpeg" alt="PURPOSE OF OUR PROJECT" id="description-image"></a>
+                  <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
+                  <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+                </article>
+              </div> 
 
-          
+      <br><br>
+      
+      <div class="container">
+          <section class="row">
+            <div class="col-md-12"> 
+        
+                <h1 class="description-header" style="font-size:45px" align="center">Sentiment Analysis - words that can make you or break you </h1>
+                <hr class="description-hr"/>
+                <img src="static/assets/images/reviews_doughnut.png"height="530px"  class="indexpage-image"/>               
+            </div>     
+          </section>
+      </div>
+          <br><br><br>
+    
 
-
-
+  <div class="jumbotron jumbotron-fluid">
+      <!-- <div class="container"> -->
+        <h2 class="display-4">Steps To Basic Sentiment Analysis Through Machine Learning </h2>
+        <p class="lead">Step 1 is to familiarize with the data. Step 2 is to find the right classifiaction model. Step 3 is to evaluate the efficience of different model and choose the right one. Step 4 is to use the model to predit </p>
+        <section class="row">
+          <div class="col-md-3">
+                <div id="images">
+                  <a href="{{ url_for('datatabicon') }}"><img src="../static/assets/images/bar-chart-reviews-recommendations.PNG" alt="DataButtonImage" class="imageNav-photo"><button class="btn">CLICK Step 1</button></a>
+                </div>
+          </div>
+          <div class="col-md-3">
+              <div id="images">
+                  <a href="{{ url_for('modelicon') }}"><img src="../static/assets/images/ModelpageImage.png" alt="Latitude vs. Humidity" class="imageNav-photo"><button class="btn">CLICK Step 2</button></a>
+              </div>
+          </div>   
+                 
+          <div class="col-md-3">
+              <div id="images">     
+                 
+                  <a href="{{ url_for('precisionicon') }}"><img src="../static/assets/images/PrecisionPageImage.jpeg" alt="Latitude vs. Cloudiness" class="imageNav-photo"><button class="btn">CLICK Step 3</button></a>
+                </div>
+              </div>  
+             
+           <div class="col-md-3">
+              <div id="images">
+                <a href="{{ url_for('predictoricon') }}"><img src="../static/assets/images/PredictpageImage.jpeg" alt="Latitude vs. Wind Speed" class="imageNav-photo"><button class="btn">CLICK Step 4</button></a>
+              
+            </div>
+            </div>
+        </section>
+      <!-- </div> -->
+    </div>
 
 
           <!-- <p style="color:turquoise;font-size:30px">DataVisualizations-Project</p>
@@ -77,19 +135,19 @@
 
            
   
- 
+    </div>
     <!-- End of container -->
 
-
+ 
   <!-- java script files  -->
-  <script type="text/javascript" src="../static/js/config.js"></script>
-  <script type="text/javascript" src="../static/js/markercluster_logic.js"></script>
+  <!-- <script type="text/javascript" src="../static/js/config.js"></script>
+  <script type="text/javascript" src="../static/js/markercluster_logic.js"></script> -->
   
-
-
+  <!-- navbar-fixed-bottom -->
+<br><br><br><br><br><br><br>
     <!-- Start of footer -->
     <!-- <footer> -->
-    <footer class="footer navbar-fixed-bottom"> 
+    <footer class="footer"> 
       <!-- <div class="two-toned-footer-color"></div>   -->
      
         <!-- <p class="text-center" style="font-size:16px">George Institute of Technology  Data Analytics : Sentiment Analysis Team</p> -->
@@ -101,6 +159,7 @@
       
     </footer>
     <!-- End of footer -->
+
 
     <!-- jQuery CDN -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
