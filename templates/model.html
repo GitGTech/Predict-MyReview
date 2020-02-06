@@ -45,52 +45,29 @@
 
                  <p>This was achieved using pandas which is a software library written for the Python programming language for data manipulation and analysis. Pandas, which is derived from "panel data", is capable of accomplishing several task but in regards to extraction it's ability for reading/importing and writing/exporting data between in-memory data structures and different file formats such as csv, excel, json, ect was utilized. A pd.read_csv() function was called on the file path created above and the information was stored into a dataframe named df.</p>
                  <img src="/static/images/pdread.jpg" class="center"/>
-                 <p>Now that the data had been loaded the cleaning process could begin. </p>
-                
-                <p>This bar chart displays the number of gun violence incidents which resulted in either death or injuries during the years of 2014 through 2017 across the United States of America.</p>
-                <p>During those four years of time each succesive year resulted in more incidents of gun violene (resulting in death/injuries) than the previous year. However there was an intresting trend in the data.</p>
-                <table style="width:100%" border="2">
-                  <thead>
-                    <tr>
-                      <th colspan="3">Gun Violence Incidents</th>
-                    </tr>
-                    <tr>
-                      <th>Years</th>
-                      <th>Injuries</th>
-                      <th>Killings</th>
-                    
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>2014 → 2015</td>
-                      <td>+ 3965</td>
-                      <td>+ 927</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>2015 → 2016</td>
-                      <td>+ 3613</td>
-                      <td>+ 1582</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>2016 → 2017 </td>
-                      <td>+ 123</td>
-                      <td>+ 445</td>
-                      
-                    </tr>                    
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <th  colspan="3">Increase in gun violence incidents resulting in death/injuries compared to the previous years total</th>
-                    </tr>
-                  </tfoot>
-                </table>
-              <p>After 2014, for the next two years, there was an increase of 3750+ gun related injuries and 1250+ gun related deaths in total per year on average. This positve trend depicted a grim future in regards to gun related violence in the United States. In fact the largest mass shooting in modern United States history occured in October, 2017 (Las Vegas Shootings). That coupled with an insignificant year for federal gun reform it appeared that 2017 would suffer another increase of 3750+ gun related injuries and 1250+ gun related deaths.</p>
-              <p>Fortunately that did not occur, thanks to a good year for state level action. More than 30 laws preventing gun violence passed in state legislatures, and more than 200 had been passed since 2013, according to a new report from a gun safety group. It appears that the increased gun reforms on a state level helped reduce the positive trend in gun related incidents. This indicates that there may just be hope for less gun related violence in the United States.</p>
-              <p>If creating gun reform on a state level lead to a 97% decrease in the trend of gun injuries and a 50% decrease in the trend of gun killings it can only be assumed that an even more drastic decrease would occur if national gun reform was implimented. In fact, the total number of gun related incidents may begin to decrease as a whole. However, until such reforms are passed by congress the only thing in our power to do is monitor the data closely and hope for the best.</p>
-              <p></p>
+                 <br><br>
+                 <p>Now that the data had been loaded the cleaning process could begin. As mentioned before the columns we were most interested in were "reviews.text" and "reviews.rating". When inspecting the type each of these columns it was discovered that "reviews.text" was of type string while "reviews.rating" was of type float. Reviews.rating as type float presented an issue because the machine learning libraries that were going to be used were classification models which typically only want text information. The column could have been converted to a string but that most certainty would have reduced the accuracy of the model due to the several factors but most importantly the chance that specific words were only used in each of the star ratings was unlikely. So in order to address this issue the star ratings were converted into either POSITIVE (5 and 4 star reviews) and NEGATIVE (3 stars and below reviews).</p>
+                 <img src="/static/images/pos_neg.jpg" class="center"/>
+                <p>This was achieved using a for loop on the "reviews.rating" column followed by an if/else conditional statement that would see if the current review rating was greater then 3 or not. If the rating was greater than 3 a POSITIVE was appended to an empty list, called review_classifaction, otherwise a NEGATIVE was appended. A new column was created in the df dataframe named "review_rating" which would now serve as our "y" during the train test split phase.  </p>
+                <br><br>
+                <p>The next step in the cleaning process was in regards to the count of positive vs negative reviews. When a .value_counts() function was called on the newly created ["reviews_rating"] column, it was discovered that there were 2344 (6.76%) negative reviews and 32316 (93.24%) positive reviews.</p>
+                <img src="/static/images/valuecounts.jpg" class="center"/>
+                <p>This stark difference in positive and negative reviews would cause issues with the models ability to predict positive vs negative reviews accurately. When using the dataset in its current form the model predicted positive reviews with 96.6% accuracy which was fantastic but it had an accuracy of only 41.2% for negative reviews. In order to address this issue the number of records were matched in regards to positive and negative.</p>
+                <img src="/static/images/negativedf.jpg" class="center"/>
+                <p>A new dataframe named df_negative was created and it included all the information from the original dataframe but it only included information were ['review_rating'] was == NEGATIVE. This narrowed down the dataframe to only include records that were true for that conditional statement. The same procedure was followed for positive reviews and then the first 2344 records were selected and stored into a dataframe named df_positive.</p>
+                <img src="/static/images/positivedf.jpg" class="center"/>
+                <br><br>
+                <p>Finally the df_negative and df_positive were concatenated into a final dataframe named amazon which was exported as a csv file using pd.to_csv() function.</p>
+                <img src="/static/images/amazondf.jpg" class="center"/>
+                <br>
+                <img src="/static/images/tocsv.jpg" class="center"/>
+                <br><br><br>
+                <h1>Text Cleaning</h1>
+                <hr class="description-hr"/>
+                <br><br><br>
+                <h1>Train Test Split</h1>
+                <hr class="description-hr"/>
+
             </article>
               
             </div>
