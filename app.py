@@ -137,7 +137,7 @@ def predictoricon():
 def modelicon():
      return render_template("model.html")
 
-  @app.route("/visual")
+@app.route("/visual")
 def visualicon():
      return render_template("visualization.html") 
 
