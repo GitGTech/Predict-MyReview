@@ -137,7 +137,9 @@ def predictoricon():
 def modelicon():
      return render_template("model.html")
 
-   
+  @app.route("/visual")
+def visualicon():
+     return render_template("visualization.html") 
 
 if __name__ == "__main__":
      app.run(debug=True)
