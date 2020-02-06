@@ -56,7 +56,7 @@ NB_model_loaded = joblib.load(NB_model)
 # model_log.fit(X_train_vectors,y_train)
 # model_log.predict(X_test_vectors)
 
-
+# app = Flask(__name__)
 
 # filename = 'LogisticRegressionModel.pkl'
 # joblib.dump(model_log, filename)
