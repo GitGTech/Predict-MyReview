@@ -14,109 +14,182 @@
     <!-- Our own CSS stylesheet -->
 
     <link rel="stylesheet" href="../../assets/css/styles.css" media="screen">
-    <link rel="stylesheet" href="../static/css/style.css" media="screen">
+    
   </head>
 
   <body>
-  <div class="wrapper">
+ 
             <!-- Start of navbar -->
             {% extends "layout.html" %}
             {% block content %}
-            
-              <!-- Start of container -->
-              <div class="container">
-                <section class="row">
-                  <div class="col-md-12">
-                    <h1 class="description-header" style="font-size:45px">Types of Gun Violence in USA : Year 2014 - 2019</h1>
-                    <hr class="description-hr"/>
-                  </div>
-              </div>
-              <!DOCTYPE html>
-              <html lang="en-us">
-                <head>
-              
-                  <meta charset="UTF-8">
-                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-              
-                  <title>Sentiment Analysis Visualization Dashboard</title>
-              
-                  <!-- Boostrap Stylesheet -->
-                  <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" media="screen"> 
-                
-                  <!-- Our own CSS stylesheet -->
-              
-                  <link rel="stylesheet" href="../../assets/css/styles.css" media="screen">
-              
-                </head>
-              
-                <body>
-                <div class="wrapper">
-                          <!-- Start of navbar -->
-                          {% extends "layout.html" %}
-                          {% block content %}
                           
                             <!-- Start of container -->
-                            <div class="container">
+                            <!-- <div class="container">
                               <section class="row">
                                 <div class="col-md-12">
-                                  <h1 class="description-header" style="font-size:45px">Classifiaction Report and Confusion Matrix</h1>
+                                  <h1 class="description-header" style="font-size:45px">How to Evalate which is the Best WORKING Model</h1>
                                   <hr class="description-hr"/>
                                 </div>
-                            </div>
-                            div class="container">
+                            </div> -->
+                            <div class="container"  style="background-color: rgb(167, 197, 228)">
+                           
                             <section class="row">
                               <div class="col-md-12">
-                                <h1 class="description-header" style="font-size:45px">Classifiaction Report and Confusion Matrix</h1>
-                                <p> CountVectorizer (input='content', encoding='utf-8', decode_error='strict', strip_accents=None, lowercase=True, 
-                                  preprocessor=None, tokenizer=None, stop_words=None, token_pattern='(?u)\b\w\w+\b', ngram_range=(1, 1), 
-                                  analyzer='word', max_df=1.0, min_df=1, max_features=None, vocabulary=None, binary=False, 
-                                  dtype=<class 'numpy.int64'>)</p>
-                                <hr class="description-hr"/>   
+                                  <h1 class="description-header-precision" style="font-size:25px">How to Evalate the Best WORKING Model</h1>
+                                  <hr class="description-hr"/>
+                                <h3 class="description-header-precision" style="font-size:25px"> Hyperparameters Tuning of Models to make them perform at their highest accuracy </h3>
+                                <hr class="description-hr"/> 
+                                <p style="font-size:20px">Every Machine Learning model has several parameters that can be changed and several 
+                                  combinations of parameter settings  can be used in Grid Search to find the right combination 
+                                  that will make the model function at its highest accuracy</p>
+                                 
+                                  <h3> Examples </h3>
+                                  
+                                  <h1 class="description-header-precision" style="font-size:25px">Support Vector Classifier</h1>
+                                 
+                                  <h3>class sklearn.svm.SVC  (C=1.0, kernel='rbf', degree=3, gamma='scale', coef0=0.0, 
+                                    shrinking=True,probability=False, tol=0.001, cache_size=200, class_weight=None, 
+                                    verbose=False, max_iter=-1, decision_function_shape='ovr', break_ties=False, 
+                                    random_state=None) </h3>
+                                  <hr class="description-hr"/>   
+                                  
+                                  <h1 class="description-header-precision" style="font-size:25px">Logistic Regression Classifier</h1>
+
+                                  <h3>class sklearn.linear_model.LogisticRegression  (penalty='l2', dual=False, tol=0.0001,
+                                   C=1.0, fit_intercept=True, intercept_scaling=1, class_weight=None, random_state=None, 
+                                   solver='lbfgs', max_iter=100, multi_class='auto', verbose=0, warm_start=False, n_jobs=None,
+                                    l1_ratio=None</h3>
+                                    <hr class="description-hr"/>  
+                                    <section class="row">
+                                        <div class="col-md-8">
+                                            <h1 class="description-header-precision" style="font-size:25px">Model Scores and Confusion Matrices</h1>
+                                          <p style="font-size: 20px">A confusion matrix is a summary of prediction results on a classification problem.
+                                              The number of correct and incorrect predictions are summarized with count values and broken down by each class. This is the key to the confusion matrix.
+                                              The confusion matrix shows the ways in which your classification model is confused when it makes predictions.
+                                              It gives us insight not only into the errors being made by a classifier but more importantly the types of errors that are being made.
+                                          </p>
+                                        </div>
+        
+                                        <div class="col-md-4"></div>
+                                        <img    src="../static/assets/images/images (1).png" alt="">
+                                      </section>
                               </div>
-                          </div>
+                    
+                        </div>
                           
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          <div class="container">
-                            <div class="row">
-                              <div class="col-md-3">
-                                <div class="well">
-                                  <h5>SELECT Year:</h5>
-                                  <select id="selDataset" onchange="optionChanged(this.value)"></select>
-                                </div>
-                                <div class="panel panel-primary">
-                                  <div class="panel-heading">
-                                    <h3 class="panel-title">Gun Usage - Yearly Data</h3>
+                        <div class="container"  style="background-color: rgb(167, 197, 228)">
+                         
+                              <section class="row">
+                                  <div class="col-md-12">
+                                      <h1 class="description-header-precision" style="font-size:45px">Evaluation</h1>
+                                      <!-- <hr class="description-hr"/> -->
                                   </div>
-                                  <div id="sample-metadata" class="panel-body"></div>
-                                </div>
+                                  <div class="col-md-2">
+                                      <h1 class="description-header-precision" style="font-size:35px">Model</h1>
+                                  </div>
+                                  <div class="col-md-5">
+                                  <h1 class="description-header-precision" style="font-size:35px">Classification Report</h1>
+                                  </div>
+                                  <div class="col-md-5">
+                                    <h1 class="description-header-precision" style="font-size:35px">Confusion Matrix</h1>
+                                  </div> 
+                                  <div class="col-md-12">
+                                      <hr class="description-hr"/> 
+                                  </div>
+                                </section>     
+                              </div>   
+                          
+                            
+                          
+                          <div class="container"  style="background-color: rgb(167, 197, 228)">
+                             
+                                  
+                                  <section class="row">
+                                      <div class="col-md-2"> <h3>Decision Tree </h3> </div>
+                                      <div class="col-md-5">  <img class="precision_image"  src="../static/assets/images/DecisionTreeCReport.png" alt="Decision Tree Classification report"></div>
+                                      <div class="col-md-5">  <img class="precision_image"  src="../static/assets/images/DecisionTreeCM.png" alt="Decision confusion matrix"></div>
+                                  </section>
                               </div>
-                              <div class="col-md-9">
-                                <div id="pie"></div>
-                              </div>
-                            </div>
+                        </div>
+
+                        <div class="container" style="background-color: rgb(167, 197, 228)">
+                              
+                                  <section class="row">
+                                      <div class="col-md-2"> <h3>K-Nearest Neighbor </h3> </div>
+                                      <div class="col-md-5">  <img class="precision_image"  src="../static/assets/images/KNNCReport.png" alt="KNN Classification report"></div>
+                                      <div class="col-md-5">  <img class="precision_image"  src="../static/assets/images/KNNCM.png" alt="KNN confusion matrix"></div>
+                                  </section>
+                              
+                      </div>
+
+                      <div class="container" style="background-color: rgb(167, 197, 228)">
+                             
+                                  <section class="row">
+                                      <div class="col-md-2"> <h3>Random Forest </h3> </div>
+                                      <div class="col-md-5">  <img  class="precision_image"   src="../static/assets/images/RandomForestReport.png" alt="RandonForest Classification report"></div>
+                                      <div class="col-md-5">  <img class="precision_image"  src="../static/assets/images/RandomForestCM.png" alt="RandonForest  confusion matrix"></div>
+                                  </section>
+                              
+                   </div>
+                   <div class="container" style="background-color: rgb(167, 197, 228)">
+                            
+                                  <section class="row">
+                                      <div class="col-md-2"> <h3>Support Vector Classifier </h3> </div>
+                                      <div class="col-md-5">  <img class="precision_image"  src="../static/assets/images/SVCcreport.png" alt="SVC Classification report"></div>
+                                      <div class="col-md-5">  <img class="precision_image"  src="../static/assets/images/SVCCM.png" alt="svcconfusion matrix"></div>
+                                  </section>
+                              
+                      </div>
+                      <div class="container" style="background-color: rgb(167, 197, 228)">
+                         
+                                  <section class="row">
+                                      <div class="col-md-2"> <h3>Naive Bayes </h3> </div>
+                                      <div class="col-md-5">  <img class="precision_image"  src="../static/assets/images/NBCreport.png" alt="NB Classification report"></div>
+                                      <div class="col-md-5">  <img class="precision_image"  src="../static/assets/images/SVCCM.png" alt="NB confusion matrix"></div>
+                                  </section>
+                              
+                        </div>
+                           
+                        <div class="container" style="background-color: rgb(167, 197, 228)">
+                             
+                                  <section class="row">
+                                      <div class="col-md-2"> <h3>Logistic Regression </h3> </div>
+                                      <div class="col-md-5">  <img class="precision_image"  src="../static/assets/images/LogRegCReport.png" alt="LogReg Classification report"></div>
+                                      <div class="col-md-5">  <img class="precision_image"  src="../static/assets/images/LogRegCM.png" alt="LodRegconfusion matrix"></div>
+                                  </section>
+                            
+                          </div>       
+                          <div class="container" style="background-color: rgb(167, 197, 228)">   
+                              
+                                  <section class="row">
+                                    <div class="col-md-12">
+                                    <h3 class="pre_center"> Accuracy Scores of  Various Model </h3>
+
+                                    <img class="precision_image2" src="../static/assets/images/ModelAccuracyScore.png" alt="Tableau">
+                                    <h3 class="pre_center"> Logistic Regression proved to have the highest accuracy score </h3>
+                                    <p style="font-size:20px"> Is it true that higher the accuracy of the model, better is its predicting capabilitities ? Is that defines the best working model ? The only way to find out is to put the model to the TEST </p>
+                                  </div>
+                                  </section>
+                              
                           </div>
-                          <div class="container" >
-                            <section class="row">
-                              <div class="col-md-12">
-                                <article class="description-content">
-                                  <h1 class="description-header">Pie Chart: Gun Violence (2014-2019)</h1>
-                                  <hr class="description-hr"/>
-                                  <img src="../static/assets/images/gun2.jpg" alt="" id="description-image"/>
-                                  <p>This pie chart displays the type of gun violence incidents which resulted in either death or injuries during the years of 2014 through 2019 across the United States of America. The categories included:<br>Mass Shootings<br>Murder Suicides<br>Defensive Use<br>Unintentional Shootings<br>Home Invasions</p>
-                                  <p>The data displayed shows how home invasion leads to the most incidents of gun violence. It typically leads to about 35% of yearly gun shootings. Defensive shootings follow close behind home invasions for the second leading cause of gun shootings. This trend remained steady throuhgout the duration of this study. One intresting spike did occur in the number of unintentional shootings in the years of 2016 and 2017, it was never able to topple defensive shootings but it was certainly a large portion of yearly gun shootings.</p>
+
+
+
+
+
+
+
+
+
+
+
+                               
+
+               
                                 
-                              </article>
+                            
+                              
                                 
-                              </div>
-                </div> 
                 <br><br><br><br><br><br><br> 
                   <!-- Start of footer -->
                   <footer class="footer">
@@ -128,75 +201,16 @@
                     <p class="text-center" style="font-size:24px">George Institute of Technology  Data Analytics : Sentiment Analysis Team</p>
                   </footer>
                   <!-- End of footer -->
-                  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-                  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-                  <script src="https://d3js.org/d3.v5.min.js"></script>
-                  <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
+                  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script> -->
                 
-                  <script src="../static/js/pie_map.js"></script>
               
               
-                  <!-- jQuery CDN -->
-                  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-              
-                  <!-- Bootstrap JS CDN -->
-                  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-                  {% endblock %}
-                </body>
-              
-              </html>
-              
-            <div class="container">
-              <div class="row">
-                <div class="col-md-3">
-                  <div class="well">
-                    <h5>SELECT Year:</h5>
-                    <select id="selDataset" onchange="optionChanged(this.value)"></select>
-                  </div>
-                  <div class="panel panel-primary">
-                    <div class="panel-heading">
-                      <h3 class="panel-title">Gun Usage - Yearly Data</h3>
-                    </div>
-                    <div id="sample-metadata" class="panel-body"></div>
-                  </div>
-                </div>
-                <div class="col-md-9">
-                  <div id="pie"></div>
-                </div>
-              </div>
-            </div>
-            <div class="container" >
-              <section class="row">
-                <div class="col-md-12">
-                  <article class="description-content">
-                    <h1 class="description-header">Pie Chart: Gun Violence (2014-2019)</h1>
-                    <hr class="description-hr"/>
-                    <img src="../static/assets/images/gun2.jpg" alt="" id="description-image"/>
-                    <p>This pie chart displays the type of gun violence incidents which resulted in either death or injuries during the years of 2014 through 2019 across the United States of America. The categories included:<br>Mass Shootings<br>Murder Suicides<br>Defensive Use<br>Unintentional Shootings<br>Home Invasions</p>
-                    <p>The data displayed shows how home invasion leads to the most incidents of gun violence. It typically leads to about 35% of yearly gun shootings. Defensive shootings follow close behind home invasions for the second leading cause of gun shootings. This trend remained steady throuhgout the duration of this study. One intresting spike did occur in the number of unintentional shootings in the years of 2016 and 2017, it was never able to topple defensive shootings but it was certainly a large portion of yearly gun shootings.</p>
                   
-                </article>
+            
+            
                   
-                </div>
-  </div> 
-  <br><br><br><br><br><br><br> 
-    <!-- Start of footer -->
-    <footer class="footer">
-    
-      <p class="text-center" style="font-size:20px"><a href="https://www.linkedin.com/in/georgeoddoye/" target="_blank">George Oddoye</a>, 
-        <a href="https://www.linkedin.com/in/minukhosla/" target="_blank">Minu Khosla</a>,
-        <a href="https://www.linkedin.com/in/vidhyaj1974/" target="_blank">Vidhyanandhi Jegannathan</a>
-      </p>
-      <p class="text-center" style="font-size:24px">George Institute of Technology  Data Analytics : Sentiment Analysis Team</p>
-    </footer>
-    <!-- End of footer -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
+           
   
-    <script src="../static/js/pie_map.js"></script>
-
 
     <!-- jQuery CDN -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>

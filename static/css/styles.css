@@ -48,11 +48,8 @@ width: 1800px;
 
     font-size: 26px;
     color: blueviolet
-
-
-
-
  }
+
 #description-image{
     width: 200px;
     height: 200px;
@@ -78,13 +75,50 @@ width: 1800px;
 }
 .description-header{
     margin-bottom: 30px;
+    
     align-content: center;
     font-weight: bold;
     color: darkturquoise;
     font-size: 18px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    float:center;
 }
  
+.description-header-precison{
+     margin-bottom: 30px;
+     margin-left : 200px;
+    align-content: center;
+    font-weight: bold;
+    color:black;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.precision_image{
+ padding-bottom: 20px;
+ padding-top: 20px;
+
+
+}
+
+ .precision_image2{
+    float: center;
+    margin-left: 400px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+   
+   
+   } 
+
+.pre-center{
+    margin-left: 200px;
+ 
+
+}
+.container-precision{
+
+    background-color: rgb(167, 197, 228);
+}
 .indexpage-image{
 
    float:center;
