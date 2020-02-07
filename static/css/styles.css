@@ -50,6 +50,22 @@ width: 1800px;
     color: blueviolet
  }
 
+.wrapper-precision .container{
+    background-color:whitesmoke;
+    width: 80%;
+    opacity:1;
+}
+
+.wrapper-precision1 .container{
+    background-color:whitesmoke;
+    width: 80%;
+    opacity:1;
+}
+
+
+
+
+
 #description-image{
     width: 200px;
     height: 200px;
@@ -88,22 +104,27 @@ width: 1800px;
      margin-bottom: 30px;
      margin-left : 200px;
     align-content: center;
+    background-color: aqua;
+    border: 1px solid powderblue;
     font-weight: bold;
-    color:black;
-    font-size: 18px;
+    color:rgb(36, 17, 209);
+
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .precision_image{
  padding-bottom: 20px;
  padding-top: 20px;
-
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ /* width: 40%; */
 
 }
 
  .precision_image2{
     float: center;
-    margin-left: 400px;
+    margin-left: 300px;
     padding-bottom: 20px;
     padding-top: 20px;
    
