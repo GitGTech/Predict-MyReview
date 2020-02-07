@@ -67,7 +67,48 @@
                 <br><br><br>
                 <h1>Train Test Split</h1>
                 <hr class="description-hr"/>
-
+                <p>Sklearn (or Scikit-learn) is a Python library that offers various features for data processing that can be used for classification, clustering, and model selection. Train_test_split is a function in Sklearn model selection for splitting data arrays into two subsets: for training data and for testing data. Using the same dataset for both training and testing leaves room for miscalculations, thus increases the chances of inaccurate predictions.
+                The train_test_split function allows you to break a dataset with ease while pursuing an ideal model. Train test split has several paramaters the first of which is selecting the X and y you wish to utilize from the dataset. As mentioned above the X was set to "reviews.text" while y was set to "review_rating".</p>
+                <img src="/static/images/xy.jpg" class="center"/>
+                <p>The next parameter of importance is test_size which specifies the size of the testing dataset. The default is set to 0.33 (33%) which served the model well but when different testing sizes were used it was discovered that a test size of 0.23 (23%) yielded the best model.</p>
+                <img src="/static/images/tts.jpg" class="center"/>
+                <br><br><br>
+                <h1>Pre-Processing</h1>
+                <hr class="description-hr"/>
+                <p>With the training and testing data now set it was time </p>
+                <br><br><br>
+                <h1>Classifiers</h1>
+                <hr class="description-hr"/>
+                <p>Classification is the process of predicting the class of given data points. Classes are sometimes called as targets/ labels or categories. Classification predictive modeling is the task of approximating a mapping function (f) from input variables (X) to discrete output variables (y).
+                  Classification belongs to the category of supervised learning where the targets also provided with the input data. A classifier utilizes some training data to understand how given input variables relate to the class. Within classification there are two types of learns which are lazy learners and eager learner. Lazy learners simply store training data and wait for test data to appear at which time it conducts classification based on the most related data in the stored training data (Ex. KNN). Lazy learners have less training time but more time in prediction.
+                  Eager learners on the other hand construct an entire classification model based on the training data before receiving any test data. This model must be able to commit a single hypothesis that covers the entire testing set (Ex. Decision Tree, Naive Bayes). Due to the model construction, eager learners take a long time for train and less time to predict.
+                </p>
+                <img src="/static/images/classification.png" class="center"/>
+                <p>In order to find the best model for the prediction of reviews several were tested.
+                  <ul>
+										<li><font size="4" color="dodgerblue">Decision Trees</font></li>
+										<li><font size="4" color="dodgerblue">k-Nearest Neighbors</font></li>
+										<li><font size="4" color="dodgerblue">Random Forest</font></li>
+										<li><font size="4" color="dodgerblue">Support Vector Classifier</font></li>
+										<li><font size="4" color="dodgerblue">Naive Bayes</font></li>
+										<li><font size="4" color="dodgerblue">Logistic Regression</font></li>
+									  </ul> 
+                </p>
+                <p><b><font size="5">Decision Trees</font></b><br>
+                  <img src="/static/images/decisiontrees.jpg"/><br>
+                  Decision tree builds classification or regression models in the form of a tree structure. It utilizes an if-then rule set. The rules are learned sequentially using the training data one at a time.  Attributes at the top of the tree have more impact towards in the classification and they are identified using the information gain concept. A decision tree can be easily over-fitted generating too many branches and may reflect anomalies due to noise or outliers.</p>
+                  <img src="/static/images/dtmodel.jpg" class="center"/><br><br>
+                <p><b><font size="5">k-Nearest Neighbors</font></b><br>
+                  <img src="/static/images/knnmodel.jpg"/><br>k-Nearest Neighbor is a lazy learning algorithm which stores all instances correspond to training data points in n-dimensional space. When an unknown discrete data is received, it analyzes the closest k number of instances saved (nearest neighbors)and returns the most common class as the prediction</p>
+                  <img src="/static/images/knnfit.jpg" class="center"/><br><br>
+                  <p><b><font size="5">Random Forest</font></b><br>
+                    <img src="/static/images/rfmodel2.jpg"/><br>The fundamental concept behind random forest is a simple but powerful one — the wisdom of crowds. A large number of relatively uncorrelated models (trees) operating as a committee will outperform any of the individual constituent models. The low correlation between models is the key, uncorrelated models can produce ensemble predictions that are more accurate than any of the individual predictions. The reason for this wonderful effect is that the trees protect each other from their individual errors </p>
+                <br><br><br>
+                <h1>Hyperparameter Tuning</h1>
+                <hr class="description-hr"/>
+                <br><br><br>
+                <h1>Evaluation</h1>
+                <hr class="description-hr"/>
             </article>
               
             </div>

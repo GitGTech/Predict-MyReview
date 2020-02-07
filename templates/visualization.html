@@ -1,14 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>AMAZON REVIEWS</title>
+    <link rel="stylesheet" href="static/css/visualization_style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
         {% extends "layout.html" %}
         {% block content %}
+
+
+        <div class="container" style="background-image: url('static/images/ml2.jpg')">
+
+          
+          <h1 class="ml10">
+              <span class="text-wrapper">
+                  <span class="letters text2">DATA  VISUALIZATIONS</span>
+              </span>
+          </h1>
+      
+      
+          <div class="row">
+              <div class="col-md-6">
+                  <img src="static/images/bar-chart-reviews-recommendations.PNG">
+                  <div class="div_box">
+                      99% of Postive Reviewers would recommend to others and 1% would NOT.
+                      46% of Negative Reviewers would recommend to others and 54% would NOT.
+                      <br><br>
+                      
+                      <a target="_blank" href="">Tableau Link</a>
+                  </div>
+              </div>
+      
+              <div class="col-md-6">
+                  <img src="static/images/bar-rating-score.PNG">
+                  <div class="div_box">
+                      Highest number of customers have given rating 5 and 3, followed by 4 and 1,2.
+                      <br><br>
+                      <br>
+                      <a target="_blank" href="">Tableau Link</a>
+                  </div>
+              </div>
+             
+          </div>
+          
+          
+          <div class="row">
+              <div class="col-md-6">
+                  <img src="static/images/review-length-type2.PNG">
+                  <div class="div_box">
+                       Average length of review text is double in negative reviews than positive reviews (700 vs 300).
+                       
+                      <br><br><br>
+                      <a target="_blank" href="">Tableau Link</a>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <img src="static/images/reviews_helpful_type.PNG">
+                  <div class="div_box">
+                      Highest Number of future customers have found the Negative Reviews most helpful as compare to Positive Reviews.
+                     <br><br><br>
+                      
+                      <a target="_blank" href="">Tableau Link</a>
+                  </div>
+              </div>
+          </div>
+          
+      
+          <div class="row">
+              <div class="col-md-6">
+                  <img src="static/images/common-review-titles-type.PNG">
+                  <div class="div_box">
+                      Most common positive review titles have word 'Great' in them, whereas most common negative review titles have word 'ok' in them. 
+                      <br><br>
+                      <a target="_blank" href="">Tableau Link</a>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <img src="static/images/review-length-score2.PNG">
+                  <div class="div_box">
+                      Rating score 1 and 2 have approx same avg. review length, followed by rating score 3 and then 1 and 2.
+                      It summarizes that the lower the rating score, the higher is the avg. length of review.
+                      <br>
+                      <a target="_blank" href="">Tableau Link</a>
+                  </div>
+              </div>
+      
+          </div>
+          <br>
+          <br>
+      
+          </div>
+      
+      
+      
+            
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+          <script src="static/js/visual.js"></script>
+      
 
 
 
@@ -18,7 +110,8 @@
     <!-- Start of footer -->
     <footer class="footer">
       
-      <p class="text-center" style="font-size:20px"><a href="https://www.linkedin.com/in/georgeoddoye/" target="_blank">George Oddoye</a>, 
+      <p class="text-center" style="font-size:20px">
+        <a href="https://www.linkedin.com/in/georgeoddoye/" target="_blank">George Oddoye</a>, 
         <a href="https://www.linkedin.com/in/minukhosla/" target="_blank">Minu Khosla</a>,
         <a href="https://www.linkedin.com/in/vidhyaj1974/" target="_blank">Vidhyanandhi Jegannathan</a>
       </p>
