@@ -9,23 +9,11 @@
     <title>Sentiment Analysis Visualization Dashboard</title>
 
     <!-- Boostrap Stylesheet -->
-    <link rel="stylesheet" href="static/css/bootstrap.min.css" media="screen"> 
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" media="screen"> -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" media="screen"> 
     
-    <!-- Our own CSS stylesheet -->
    
-    <!-- <link rel="stylesheet" href="static/css/styles.css" media="screen">  -->
-    <!-- <link rel="stylesheet" href="../static/css/style.css" media="screen"> -->
-    <!-- Leaflet CSS & JS -->
+    <link rel="stylesheet" href="../static/css/styles.css" media="screen">
   
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-   
-  <!-- Marker Cluster JS & CSS -->
-<!--   
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> -->
-  <!-- <link rel="stylesheet" href="static/css/styles.css" media="screen">  -->
   </head>
 
   <body>
@@ -34,176 +22,189 @@
     {% block content %}
                <div class="wrapper1">
                <img class="center" src="../static/assets/images/state-street-artificial-intelligence.jpg" alt=""> 
-
               </div>
-                  <div class="wrapper" >  
-                    <div class="index1"></div>
+                  
+              <div class="wrapper" >  
+                  <div class="index1"></div>
                     <section class="row">
-                            <div class="col-md-4">
-                              <article class="description-content">
-                                <h2 class="description-header">WHAT IS SENTIMENT ANALYSIS AND WHY IS IT IMPORTANT</h2> 
+                        <div class="col-md-4">
+                           <article class="description-content">
+                                <h2 class="description-header">WHAT IS SENTIMENT ANALYSIS AND HOW IS IT IMPORTANT</h2> 
                                 <hr class="description-hr"/>
                                 <!-- <img src="assets/images/Fig1.png" alt="" id="description-image"/> -->
                                 <a href="https://goascribe.com/products-services/sentiment-analysis-tools/" target="_blank"><img src="../static/assets/images/smileyfaces.jpeg" alt="Sentiment Analysis - What & Why" id="description-image"></a>
-                                <p>Sentiment Analysis examines the problem of studying texts, like posts and reviews, uploaded by users on microblogging platforms, forums, and electronic businesses, regarding the opinions they have about a product, service, event, person or idea.</p>
+                                <p>Sentiment analysis is the interpretation and classification of emotions within voice and text data using text analysis techniques, allowing businesses to identify customer sentiment toward products, brands or services in online conversations and feedback.</p>
+
+                                <p>Companies use sentiment analysis for processing data such as tweets, survey responses, and product reviews, getting key insights, and making data-driven decisions.</p>
+                                <p>Sentiment analysis models detect polarity within a text (e.g. a positive or negative opinion), whether it’s a whole document, paragraph, sentence, or clause.</p>
                                 
-                                <p>The most common use of Sentiment Analysis is this of classifying a text to a class. Depending on the dataset and the reason, Sentiment Classification can be binary (POSITIVE or NEGATIVE) or multi-class (3 or more classes) problem.</p>
+                                <p>Sentiment analysis can be used for:</p>
+                                <li>Social media monitoring</li>
+                                <li> Brand monitoring</li>
+                                <li>Voice of customer (VoC)</li> 
+                                 <li> Customer service</li>
+                                <li> Market research</li>
+                                <li>Improving Employee Satisfaction with Sentiment Analysis in the corporate world </li>
                                 
-                                <li>Sentiment analysis is useful in social media monitoring of a brand </li>   
-                                   
-                                <li> Using Sentiment Analysis in Marketing </li>
-                                <li> Measures the outcomes of marketing campaigns</li>
-                                <li> Review the success of marketing programs based on changes in customer</li>
-                                <li> Supports customer service: Listening for changes in customer reactions may help brands to offer quicker resolutions to problems over social media.</li>
-                                <li>Supplements positive PR practices: Tracking sentiment helps brands to keep track of any negative mentions or comments they need to address quickly.</li>
+                            </article>
                                     
-                                 <li>Improving Employee Satisfaction with Sentiment Analysis in the corporate world </li>
-                                 <p>In the last years, Sentiment Analysis has become a hot-trend topic of scientific and market research in the field of Natural Language Processing (NLP) and Machine Learning.</p>
-                                  
-                                 sentiment analysis can be used for:
-
-                                 Social media monitoring
-                                 Brand monitoring
-                                 Voice of customer (VoC)
-                                 Customer service
-                                 Market research
-
-                                 MISSION IS TO build a machine learning model that will take in any new review and predict if it is positive or negative.
-
-                                 article, discourses, books, speeches, reviews
-                                
-                             
+                      </div> 
+                          <div class="col-md-4">
+                              <article class="description-content">
+                                      <h2 class="description-header">THE POWER OF CUSTOMER REVIEWS</h2> 
+                                      <hr class="description-hr"/>
+                                      <!-- <img src="assets/images/Fig1.png" alt="" id="description-image"/> -->
+                                      <img  src="../static/assets/images/amazon-Reviews-stars.png" alt="POWER OF CUSTOMER REVIEWS" id="description-image">
+                                      <ul class="text">
+                                          <!-- <li>Have you ever hesitated about a purchase?</li> -->
+                                          <li style="font-size: 20px"  style="font-family: Arial, Helvetica, sans-serif">Online reviews can help you form your decision. No matter if you are looking for the best coffee-maker or the best web hosting provider</p>
+                                          <li style="font-size: 20px"  style="font-family: Arial, Helvetica, sans-serif">Companies spend billions on marketing and advertising every year. But, at the end of the day, the opinion of other customers is worth more.</p>
+                                       </ul>   
+                                    </ul>
+                                       <li style="font-size: 20px"  style="font-family: Arial, Helvetica, sans-serif">Almost all consumers, who use online reviews, read them early in the buying process.</li>
+                                          <li  style="font-size: 20px"  style="font-family: Arial, Helvetica, sans-serif">Reviews are the most crucial part of the purchase decision for 90% of US customers.</li>
+                                          <li style="font-size: 20px"  style="font-family: Verdana, Geneva, Tahoma, sans-serif">72% of customers won’t take action until they read reviews.</li>
+                                          <li style="font-size: 20px"  style="font-family: Arial, Helvetica, sans-serif">15% of users don’t trust businesses without reviews.</li>
+                                          <li style="font-size: 20px"  style="font-family: Arial, Helvetica, sans-serif">83% of customers don’t trust advertising</li>
+                                          <li style="font-size: 20px"  style="font-family: Arial, Helvetica, sans-serif">60% of all shoppers post reviews on Amazon.</li>
+                                          <li style="font-size: 20px"  style="font-family: Arial, Helvetica, sans-serif">60% of all shoppers post reviews on Amazon.</li>
+                                          <li style="font-size: 20px"  style="font-family: Arial, Helvetica, sans-serif"> 91% of consumers say that positive reviews make them more likely to use a business</li>
+                                          <li style="font-size: 20px"  style="font-family: Arial, Helvetica, sans-serif">76% trust online reviews as much as recommendations from family and friends</li>
+                                          <li style="font-size: 20px"  style="font-family: Arial, Helvetica, sans-serif">Best-selling products’ have a 4.2-4.7 rating</li>
+                                </ul>
+                                <h3>In the last years, Sentiment Analysis has become a hot-trend topic of scientific and market research in the 
+                                    field of Natural Language Processing (NLP) and Machine Learning.</h3>
                               </article>
-                            
                             </div>
 
+                            <div class="col-md-4">
+                                  <article class="description-content">
+                                    <h2 class="description-header">PURPOSE OF OUR PROJECT</h2> 
+                                    
+                                    
+                                    <hr class="description-hr"/>
+                                    
+                                  
+                                    <!-- <img src="assets/images/Fig1.png" alt="" id="description-image"/> -->
+                                  <img  src="../static/assets/images/wordcloud1.PNG"  alt="PURPOSE OF OUR PROJECT" id="description-image"></a>
+                                  
+                                <p style="font-size: 20px"><i class="fa fa-cog"></i> Building a Machine Learning Model that can predict with considerable accuracy</p>
+                            
+                                  <p style="font-size: 20px"><i class="fa fa-cog"></i> Train different Classification Models </p>
+                                  <p style="font-size: 20px"><i class="fa fa-cog"></i> Evaluate and identify the optimally trained model with the available dataset</p>
+                                  <p style="font-size: 20px"><i class="fa fa-cog"></i> Test the model </p>
+                                  <p style="font-size: 20px"> <i class="fa fa-cog"></i> Discuss the pros and cons of the model</p> 
+                                  <p style="font-size: 20px"> <i class="fa fa-cog"></i> Discuss the applications of the model</p> 
+                                  </article>
+                            </div> 
+                    </section>
+            </div>
+          </div> 
+                        
+
               
-                                    <div class="col-md-4">
-                                      <article class="description-content">
-                                        <h2 class="description-header">THE POWER OF CUSTOMER REVIEWS</h2> 
-                                        <hr class="description-hr"/>
-                                        <!-- <img src="assets/images/Fig1.png" alt="" id="description-image"/> -->
-                                        <img  src="../static/assets/images/amazon-Reviews-stars.png" alt="POWER OF CUSTOMER REVIEWS" id="description-image">
-                                        <ul class="text">
-                                            <!-- <li>Have you ever hesitated about a purchase?</li> -->
-                                            <li st>Online reviews can help you form your decision. No matter if you are looking for the best coffee-maker or the best web hosting provider</li>
-                                            <li s>Companies spend billions on marketing and advertising every year. But, at the end of the day, the opinion of other customers is worth more.</li>
-                                            <li s>Almost all consumers, who use online reviews, read them early in the buying process.</li>
-                                            <li style="font-family: Arial, Helvetica, sans-serif">Reviews are the most crucial part of the purchase decision for 90% of US customers.</li>
-                                            <li style="font-family: Verdana, Geneva, Tahoma, sans-serif">72% of customers won’t take action until they read reviews.</li>
-                                            <li>15% of users don’t trust businesses without reviews.</li>
-                                            <li>83% of customers don’t trust advertising</li>
-                                            <li>60% of all shoppers post reviews on Amazon.</li>
-                                            <li>60% of all shoppers post reviews on Amazon.</li>
-                                            <li>91% of consumers say that positive reviews make them more likely to use a business</li>
-                                            <li>76% trust online reviews as much as recommendations from family and friends</li>
-                                            <li>Best-selling products’ have a 4.2-4.7 rating</li>
-                                        </ul>
-                                      </article>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                      <article class="description-content">
-                                        <h2 class="description-header">PURPOSE OF OUR PROJECT</h2> 
-                                        
-                                        <hr class="description-hr"/>
-                                        
-                                       
-                                        <!-- <img src="assets/images/Fig1.png" alt="" id="description-image"/> -->
-                                       <img  src="../static/assets/images/wordcloud1.PNG"  alt="PURPOSE OF OUR PROJECT" id="description-image"></a>
-                                       
-                                     <p style="font-size: 20px"><i class="fa fa-cog"></i> Building a Machine Learning Model that can predict with considerable accuracy</p>
-                                
-                                      <p style="font-size: 20px"><i class="fa fa-cog"></i> Train different Classification Models </p>
-                                      <p style="font-size: 20px"><i class="fa fa-cog"></i> Evaluate and identify the optimally trained model with the available dataset</p>
-                                      <p style="font-size: 20px"><i class="fa fa-cog"></i> Test the model </p>
-                                      <p style="font-size: 20px"> <i class="fa fa-cog"></i> Discuss the pros and cons of the model</p> 
-                                      <p style="font-size: 20px"> <i class="fa fa-cog"></i> Discuss the applications of the model</p> 
-                                      </article>
-                                    </div> 
-                      </section>
-                    </div>
-                  <!-- </div> -->
-
-      <br><br>
+           <br><br>
       
       <div class="wrapper">
+          <article class="description-content">
           <section class="row">
             <div class="col-md-12"> 
-        
-                <h1 class="description-header" style="font-size:45px" align="center">Sentiment Analysis - words that can make you or break you </h1>
-                <hr class="description-hr"/>
-                <img src="static/assets/images/reviews_doughnut.png"height="530px"  class="indexpage-image"/>               
-            </div>     
-          </section>
-      </div>
+           
+                <h1 class="description-header" style="text-align:center" style="font-size:45px">WHY WE CHOSE TO DO THIS PROJECT</h1>
+          
+                <!-- <h2 class="description-header"style="text-align:center"  style="font-size:45px">Sentiment Analysis - words that can make you or break you </h2> -->
+                <!-- <hr class="description-hr"/> -->
+            <!-- </article> -->
+           </div>  
+                
+            <div class="col-md-6"> 
+           
+                <img class="index-image1"   src="../static/assets/images/natural-language-processing-nlp2.jpg" alt="">
+                </div>
+                    
+                <div class="col-md-6"> 
+                <img class="index-image1"  src="../static/assets/images/natural-language-processing-nlp7.jpg" alt="">
+             
+            </div>
+           
+            <br><br>
+            <hr class="description-hr"/>
+            <div class="col-md-12"> 
+         
+                <h4>Natural Language Processing Market by Component, Deployment Mode, Organization Size, Type, Application 
+                  (Sentiment Analysis and Text Classification), Vertical (Healthcare and Life Sciences, and BFSI), and Region - Global Forecast to 2024</h4>
+                 
+                 <br>
+                  <p style="font-size:16px">By application the Sentiment Analysis segment is expected to grow at the highest rate dueing the few years
+                    owing to the increased focus on understanding end user segments before , during and after shopping to enhance 
+                    customer experiences. We wanted to start learning more about this branch of Machine Learning  not only to gain knowledge 
+                  and grow but also enjoy the financial benefits of having a job in this space. As we did research for this project we noticed that 
+                    there were barely any datasets available that showed relationship between Sentiment Analysis and increase in Sales or Profits in the market place.
+                    There is a lot of opportunity for future Data Analysts and Data Scientist to thrive in this field arrive  at a point where every business uses 
+                  NLP / Sentiment Analysis for faster growth .</p>
+           </div>  
+             <br>
+             <hr class="description-hr"/>
+           <div class="col-md-12"> 
+                  <a href="https://www.marketsandmarkets.com/Market-Reports/natural-language-processing-nlp-825.html/"  target="_blank">  <img src="../static/assets/images/markets &markets.png" alt=""  class="index-image1" ></a>
+                  <p class="text-center" > Courtesy of MarketsandMarkets</p>
+          </div>
+       </article> 
+            
+    </section>
+ </div>
+
+
+           
           <br><br><br>
     
 
             <div class="jumbotron jumbotron-fluid">
                  <div class="container"> 
                   <h2 class="display-4">Steps To Basic Sentiment Analysis Through Machine Learning </h2>
-                  <p class="lead">Step 1 is to familiarize with the data. Step 2 is to find the right classifiaction model. Step 3 is to evaluate the efficience of different model and choose the right one. Step 4 is to use the model to predit </p>
+                  
                   <section class="row">
                       <div class="col-md-3">
                             <div id="images">
                               <a href="{{ url_for('datatabicon') }}"><img src="../static/assets/images/bar-chart-reviews-recommendations.PNG" alt="DataButtonImage" class="imageNav-photo"><button class="btn">CLICK Step 1</button></a>
+                        <h3> Familiarize with the data</h3>
                             </div>
                       </div>
                           <div class="col-md-3">
                               <div id="images">
                                   <a href="{{ url_for('modelicon') }}"><img src="../static/assets/images/ModelpageImage.png" alt="Latitude vs. Humidity" class="imageNav-photo"><button class="btn">CLICK Step 2</button></a>
-                              </div>
+                              <h3> Find the right classifiaction model</h3>
+                                </div>
                           </div>   
                           
                               <div class="col-md-3">
                                   <div id="images">     
                                     
                                       <a href="{{ url_for('precisionicon') }}"><img src="../static/assets/images/PrecisionPageImage.jpeg" alt="Latitude vs. Cloudiness" class="imageNav-photo"><button class="btn">CLICK Step 3</button></a>
+                                   <h3>Evaluate Model Accuracy Score</h3>
                                     </div>
                                   </div>  
                       
                         <div class="col-md-3">
                             <div id="images">
                               <a href="{{ url_for('predictoricon') }}"><img src="../static/assets/images/PredictpageImage.jpeg" alt="Latitude vs. Wind Speed" class="imageNav-photo"><button class="btn">CLICK Step 4</button></a>
-                            
+                              <h3> Test model to predit </h3>
                             </div>
                         </div>
                   </section>
             </div>
   
 
-          <!-- <p style="color:turquoise;font-size:30px">DataVisualizations-Project</p>
-          <p style="font-size:27px">Inspiration</p>
-          <p>There has been a steady increase in gun violence over the past decade and this trend shows no signs of slowing down. In fact, it is not uncommon to turn on the news and hear about a new mass shooting event that has occured somewhere in the nation. This year alone there have been mass shooting events in Virginia Beach, Virginia (13 Killed/4 Injured), El Paso, Texas (22 Killed/24 Injured), and Dayton, Ohio (10 Killed/27 Injured). In total there were 409 mass shooting events in 2019 resulting in 486 killed and 1642 injured. Gun control is a very sensitive and widely debated topic in The United States of America which has caused it to become highly politicised.</p>
-          <p>The two major political parties in the United States (Democrats/Republicans) have drastically different views and opinions on the subject. Until such a time comes where both sides can come to agreement on gun control it appears that the current positive trend in gun violence will continue to occur. This is what provided the inspiration for the creation of this website. As Data Analysts we can help analyze this dire situation by studying gun violence data and help provide well informed predictions about future trends in order to build strategies that will eventually minimize gun violence, and promote gun safety.</p>
-          <p style="font-size:27px">Goal</p>
-          <p> Our goal was to create a fully functional web visualization dashboard that provides gun violence data in an easily understandable manner.<br><br>
-            1)	Create a maps tab which would include:<br> • Cluster Map of gun violence that occured in America during 2018<br> • Heat Map of gun violence between 2013-2018<br> • Choropleth Map of mass shootings in 2019
-            <br><br> 2) Ceate a charts tab which would include:<br> • Line Chart displaying Gun Violence from Jan 2014 to Mar 2018 on a monthly basis <br>• Bar Chart displaying Gun Violence from Jan 2014 to Dec 2017 Yearly Reports<br>• Pie Chart displaying Types of Gun Violence during 2014-2019 on a yearly basis </p>
-          <p style="font-size:27px">Data Source</p>
-          <p>Our dataset was obtained from “Gun Violence Data” (https://www.kaggle.com/jameslko/gun-violence-data) as well as https://www.gunviolencearchive.org. This dataset contains more than 260k gun violence incidents, in the US between January 2013 and March 2018 , with detailed information about each incident, in CSV format. In order to collect 2019 data we had to download the data from https://www.gunviolencearchive.org in csv format.</p>
-          <p style="font-size:27px">User-driven interaction</p>
-           <p>This website provides the user with not only a fully interactive navigation bar but also the ability to switch the website into darkmode with the click of a button. All of the maps and charts are interactive as well.</p> -->
-        <!-- </article>
-        </div>    -->
-
-           
+          
   
    
-    <!-- End of container -->
-
+    
  
-  <!-- java script files  -->
-  <!-- <script type="text/javascript" src="../static/js/config.js"></script>
-  <script type="text/javascript" src="../static/js/markercluster_logic.js"></script> -->
-  
-  <!-- navbar-fixed-bottom -->
 <br><br><br><br><br><br><br>
     <!-- Start of footer -->
-    <!-- <footer> -->
+ 
     <footer class="footer"> 
-      <!-- <div class="two-toned-footer-color"></div>   -->
+     
      
         <!-- <p class="text-center" style="font-size:16px">George Institute of Technology  Data Analytics : Sentiment Analysis Team</p> -->
         <p class="text-center" style="font-size:20px"><a href="https://www.linkedin.com/in/georgeoddoye/" target="_blank">George Oddoye</a>, 
