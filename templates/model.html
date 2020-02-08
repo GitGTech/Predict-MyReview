@@ -120,7 +120,25 @@
         </div>
       </div>
       <br>
+
           <!-- ############################################################            -->
+          <div class="container"  >
+            <section class="row">
+              <div class="col-md-12"> 
+              <article class="description-content">
+                <h1>Pre-Processing</h1>
+                <hr class="description-hr"/>
+                <p>With the training and testing data now split it was necessary for it to be vectorized because machine learning models do not work with raw text. Instead they need to be converted to zeros and ones and stored in an array. This can be accomplished by CountVectorizer as well as TfidfVectorizer. Due to the size of our dataset performing NLP text cleaning actually made our models perform worse. For this reason bag of words and CountVectorizer were not utilized. Instead TfidfVectorizer was used because unlike CountVectorizer which gives all words the same weight, which is why it is necessary to remove stopwords, TfidfVectorizer downscales words that appear a lot across documents. This means that stop words such as "the, this, and that" which appear the most over a given corpus are weighted far less then words such as "good, bad, enjoy" which would appear less often and therefore carry far more weight.
+                  <img src="/static/images/tfid.jpg" class="center"/>
+                </p>
+                <br>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+      <br>
+                <!-- ############################################################            -->
                 <div class="container"  >
                   <section class="row">
                     <div class="col-md-12"> 
@@ -133,23 +151,6 @@
                 <p>The next parameter of importance is test_size which specifies the size of the testing dataset. The default is set to 0.33 (33%) which served the model well but when different testing sizes were used it was discovered that a test size of 0.23 (23%) yielded the best model.</p>
                 <img src="/static/images/tts.jpg" class="center"/>
                 <br>
-              </article>
-            </div>
-          </section>
-        </div>
-      </div>
-      <br>
-          <!-- ############################################################            -->
-          <div class="container"  >
-            <section class="row">
-              <div class="col-md-12"> 
-              <article class="description-content">
-                <h1>Pre-Processing</h1>
-                <hr class="description-hr"/>
-                <p>With the training and testing data now split it was necessary for it to be vectorized because machine learning models do not work with raw text. Instead they need to be converted to zeros and ones and stored in an array. This can be accomplished by CountVectorizer as well as TfidfVectorizer. Due to the size of our dataset performing NLP text cleaning actually made our models perform worse. For this reason bag of words and CountVectorizer were not utilized. Instead TfidfVectorizer was used because unlike CountVectorizer which gives all words the same weight, which is why it is necessary to remove stopwords, TfidfVectorizer downscales words that appear a lot across documents. This means that stop words such as "the, this, and that" which appear the most over a given corpus are weighted far less then words such as "good, bad, enjoy" which would appear less often and therefore carry far more weight.
-                  <img src="/static/images/tfid.jpg" class="center"/>
-                </p>
-                <br><br><br>
               </article>
             </div>
           </section>
@@ -288,8 +289,13 @@
                   a param grid was established for each model. The param grid is a list nested in a dictionary which included the various hyperparameters for each model respectively.
                   <img src="/static/images/paramgrid.jpg" class="center"/><br> With the param grids created for the top performing models it was now time to fit the training data. 
                   <img src="/static/images/gridfit3.jpg" class="center"/><br>
-                  Finally the best parameters could be determined for each of the three models by using (best_params_) and (best_score_)
-                  <img src="/static/images/gridbest.jpg" class="center"/><br>
+                  <p>Due to the nature of our data we suspected that k-Nearest Neighbors might perform the best if the hyperparameters were adjusted. In order to test this number of n_neighbors was adjusted in a for loop. </p>
+                  <img src="/static/images/knnparam.jpg" class="center"/>
+                  <p>After running this code. It was discovered that the the ideal number of n_neighbors was 31.</p>
+                  <img src="/static/images/knnparam1.jpg" class="center"/> 
+                  <br>
+                  <p>Finally the best parameters could be determined for each of the three models by using (best_params_) and (best_score_)</p>
+                  <img src="/static/images/gridbest.jpg" class="center"/>
                 </p>
               </article>
             </div>
@@ -330,7 +336,49 @@
             <!-- <div class="col-md-10"> -->
 
   </div>
-  <br><br><br><br><br><br><br>
+
+  <div class="container">
+    <section class="row">
+
+        <div class="col-md-6">
+            <div class="btn-group">
+                <a href="{{ url_for('datatabicon') }}"><button type="button" class="btn btn-primary btn-lg "> Data </button></a>
+        
+              </div>
+              <div class="col-md-6">
+                <div class="btn-group">
+                    <a href="{{ url_for('index') }}"><button type="button" class="btn btn-primary btn-lg "> Home </button></a>
+            
+                  </div>
+        </div>
+            <div class="col-md-6">
+                <div class="btn-group">
+                    <a href="{{ url_for('visualicon') }}"><button type="button" class="btn btn-primary btn-lg ">Visualization</button></a>
+              
+                  </div>
+            </div>   
+            
+                <div class="col-md-6">
+                       
+                    <div class="btn-group"> 
+                        <a href="{{ url_for('modelicon') }}"><button type="button" class="btn btn-primary btn-lg ">Model </button></a>
+                    
+                  </div>  
+                    </div>  
+        
+          <div class="col-md-6">
+              <div class="btn-group">
+                <a href="{{ url_for('precisionicon') }}"><button type="button" class="btn btn-primary btn-lg ">Precision</button></a>
+              </div>  
+          
+          </div>
+          <div class="col-md-6">
+              <div class="btn-group">
+              <a href="{{ url_for('predictoricon') }}"><button type="button" class="btn btn-primary btn-lg ">Predictor</button></a>
+            </div>  
+    </section>
+</div>
+ 
     <!-- Start of footer -->
     <footer class="footer">
     
