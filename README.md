@@ -36,24 +36,28 @@ The dataset contained a list of over 34,000 reviews of Amazon products like the 
 #### We created the Predictor Page that could take any review as an input .
 ___________________________________________________________________________
 <img src ="static/images/test1.png">
+
 ___________________________________________________________________________
 
 #### The user can select any website from the dropdown menu to get a review.
 
 ___________________________________________________________________________
 <img src ="static/images/test2.png">
-___________________________________________________________________________
+
+_________________________________________________________________________
 
 #### The user can input selected review OR type in their own custom review.
 
 __________________________________________________________________________
 <img src ="static/images/test3.png">
+
 ___________________________________________________________________________
 
 #### Hitting the "Predict Button" will show the result if the review is positive or negative.
 
 ___________________________________________________________________________
 <img src ="static/images/test4.png">
+
 ___________________________________________________________________________
 
 
